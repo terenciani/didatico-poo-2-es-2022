@@ -1,4 +1,6 @@
-package br.edu.ifpr.paranavai.armarios;
+package br.edu.ifpr.paranavai.armarios.modelo;
+import br.edu.ifpr.paranavai.armarios.modelo.Pessoa;
+import br.edu.ifpr.paranavai.armarios.modelo.Armario;
 import java.util.Date;
 public class Reserva {
     private Pessoa pessoa;

@@ -1,4 +1,4 @@
-package br.edu.ifpr.paranavai.armarios;
+package br.edu.ifpr.paranavai.armarios.modelo;
 public class Armario {
     private String numero;
     private boolean ativo;

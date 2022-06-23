@@ -1,4 +1,4 @@
-package br.edu.ifpr.paranavai.armarios;
+package br.edu.ifpr.paranavai.armarios.modelo;
 
 import java.util.Date;
 
