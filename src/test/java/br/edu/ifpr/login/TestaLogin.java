@@ -12,5 +12,6 @@ public class TestaLogin {
         LoginControlador controle = new LoginControlador();
         String resposta = controle.verifica(email,senha);
         Assert.assertEquals("sucesso no login", resposta);
+        terenciani
     }
 }
