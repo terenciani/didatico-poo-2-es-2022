@@ -5,19 +5,27 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class TestaLogin {
+    
+    private String emailInvalido = "bleble@blabla.com";
+    private String senhaInvalida = "13579";
+    
+    private String emailValido = "admin@admin.com";
+    private String senhaValida = "12345";
+    
     @Test
     public void autenticacaoOk(){
-        String email = "admin@admin.com";
-        String senha = "12345";
         /* podemos utilizar o método static,pq é uma classe vazia */
-        String resposta = LoginControlador.verifica(email,senha);
-        Assert.assertEquals("sucesso no login", resposta);    
+        String resposta = LoginControlador.verifica(emailValido,senhaValida);
+        Assert.assertEquals("Sucesso no login!", resposta);    
     }
     @Test
     public void emailInvalido(){
-        String email = "bleble@blabla.com";
-        String senha = "12345";
-        String resposta = LoginControlador.verifica(email,senha);
-        Assert.assertEquals("E-mail inválido", resposta);
+        String resposta = LoginControlador.verifica(emailInvalido,senhaValida);
+        Assert.assertEquals("E-mail inválido!", resposta); 
+    }
+    @Test
+    public void senhaInvalida(){
+        String resposta = LoginControlador.verifica(emailValido, senhaInvalida);
+        Assert.assertEquals("Senha inválida!", resposta);
     }
 }

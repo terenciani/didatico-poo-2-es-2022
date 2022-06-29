@@ -13,9 +13,11 @@ public class LoginServico {
     public static String verifica(String email, String senha){
        if (email.equals("admin@admin.com")){
            if (senha.equals("12345")){
-                return "sucesso no login";
+                return "Sucesso no login!";
            }
+           return "Senha inválida!";
        }
-       return " ";         
+       return "E-mail inválido!";         
     }
+    
 }
