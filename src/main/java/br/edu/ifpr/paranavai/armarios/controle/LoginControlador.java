@@ -4,14 +4,16 @@
  */
 package br.edu.ifpr.paranavai.armarios.controle;
 
+import br.edu.ifpr.paranavai.armarios.servico.LoginServico;
+
 /**
  *
  * @author Aluno
  */
 public class LoginControlador {
 
-    public String verifica(String email, String senha) {
-        return "sucesso no login";
+    public static String verifica(String email, String senha) {
+        return LoginServico.verifica(email,senha);
     }
     
     
