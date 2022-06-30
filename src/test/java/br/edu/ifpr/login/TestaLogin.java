@@ -21,11 +21,11 @@ public class TestaLogin {
     @Test
     public void emailInvalido(){
         String resposta = LoginControlador.verifica(emailInvalido,senhaValida);
-        Assert.assertEquals("E-mail inválido!", resposta); 
+        Assert.assertEquals("E-mail invalido!", resposta); 
     }
     @Test
     public void senhaInvalida(){
         String resposta = LoginControlador.verifica(emailValido, senhaInvalida);
-        Assert.assertEquals("Senha inválida!", resposta);
+        Assert.assertEquals("Senha invalida!", resposta);
     }
 }

@@ -4,7 +4,9 @@
  */
 package br.edu.ifpr.paranavai.armarios.servico;
 
-/**
+/**        
+ * 
+ * 
  *
  * @author Aluno
  */
@@ -15,7 +17,7 @@ public class LoginServico {
            if (senha.equals("12345")){
                 return "Sucesso no login!";
            }
-           return "Senha inválida!";
+           return "Senha invalida!";
        }
        return "E-mail inválido!";         
     }
