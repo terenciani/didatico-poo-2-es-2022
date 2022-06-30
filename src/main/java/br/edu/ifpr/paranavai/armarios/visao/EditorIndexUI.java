@@ -83,7 +83,10 @@ public class EditorIndexUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
-        // TODO add your handling code here:
+       this.setVisible(false);
+       EditorLoginUI editorLogin = new EditorLoginUI();
+       editorLogin.setVisible(true);
+       dispose();
     }//GEN-LAST:event_jPanel2MouseClicked
 
     /**
