@@ -34,6 +34,7 @@ public class EditorLoginUI extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         passFieldSenha = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
+        lblResposta = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,6 +58,8 @@ public class EditorLoginUI extends javax.swing.JFrame {
             }
         });
 
+        lblResposta.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -74,6 +77,7 @@ public class EditorLoginUI extends javax.swing.JFrame {
                         .addGap(152, 152, 152)
                         .addComponent(jButton1)))
                 .addContainerGap(67, Short.MAX_VALUE))
+            .addComponent(lblResposta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -88,7 +92,9 @@ public class EditorLoginUI extends javax.swing.JFrame {
                 .addComponent(passFieldSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                .addComponent(lblResposta)
+                .addGap(28, 28, 28))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -114,7 +120,7 @@ public class EditorLoginUI extends javax.swing.JFrame {
         String email = this.txtFieldEmail.getText();
         String senha = String.copyValueOf(this.passFieldSenha.getPassword());
         String resposta = controle.verifica(email, senha);
-        System.out.println(resposta);
+        lblResposta.setText(resposta);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -158,6 +164,7 @@ public class EditorLoginUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblResposta;
     private javax.swing.JPasswordField passFieldSenha;
     private javax.swing.JTextField txtFieldEmail;
     // End of variables declaration//GEN-END:variables

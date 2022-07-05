@@ -56,6 +56,7 @@
                   </Group>
                   <EmptySpace pref="67" max="32767" attributes="0"/>
               </Group>
+              <Component id="lblResposta" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -71,7 +72,9 @@
                   <Component id="passFieldSenha" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="98" max="32767" attributes="0"/>
+                  <EmptySpace pref="70" max="32767" attributes="0"/>
+                  <Component id="lblResposta" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -107,6 +110,11 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblResposta">
+          <Properties>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
