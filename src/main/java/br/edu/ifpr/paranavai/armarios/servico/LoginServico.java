@@ -17,7 +17,7 @@ public class LoginServico {
            if (senha.equals("12345")){
                 return "Sucesso no login!";
            }
-           return "Senha invalida!";
+           return "Senha inválida!";
        }
        return "E-mail inválido!";         
     }
