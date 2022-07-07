@@ -40,10 +40,12 @@ public class EditorIndexUI extends javax.swing.JFrame {
 
         bgPanel =  new JPanel() {  
             public void paintComponent(Graphics g) {  
+                System.out.println(EditorIndexUI.class.getResource("/assets/bg_main.png")); 
                 Image img = Toolkit.getDefaultToolkit().getImage(EditorIndexUI.class.getResource("/assets/bg_main.png"));  
                 g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);  
             }  
         };
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -53,15 +55,39 @@ public class EditorIndexUI extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 0, 0));
 
+        jPanel1.setForeground(new java.awt.Color(214, 207, 207));
+        jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel1MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout bgPanelLayout = new javax.swing.GroupLayout(bgPanel);
         bgPanel.setLayout(bgPanelLayout);
         bgPanelLayout.setHorizontalGroup(
             bgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 450, Short.MAX_VALUE)
+            .addGroup(bgPanelLayout.createSequentialGroup()
+                .addGap(88, 88, 88)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(262, Short.MAX_VALUE))
         );
         bgPanelLayout.setVerticalGroup(
             bgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 299, Short.MAX_VALUE)
+            .addGroup(bgPanelLayout.createSequentialGroup()
+                .addGap(89, 89, 89)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(110, Short.MAX_VALUE))
         );
 
         getContentPane().add(bgPanel);
@@ -73,6 +99,11 @@ public class EditorIndexUI extends javax.swing.JFrame {
         bgPanel.setPreferredSize(new Dimension(this.getWidth(), this.getHeight()));
         bgPanel.revalidate();
     }//GEN-LAST:event_formComponentResized
+
+    private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
+        EditorLocalizacaoUI editorLocalizacaoUI = new EditorLocalizacaoUI();
+        editorLocalizacaoUI.setVisible(true);
+    }//GEN-LAST:event_jPanel1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -112,5 +143,6 @@ public class EditorIndexUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bgPanel;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
