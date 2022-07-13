@@ -5,7 +5,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.JPanel;
-
+import java.awt.Color;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -38,14 +38,16 @@ public class EditorIndexUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        bgPanel =  new JPanel() {  
+        painelBackground =  new JPanel() {  
             public void paintComponent(Graphics g) {  
                 System.out.println(EditorIndexUI.class.getResource("/assets/bg_main.png")); 
                 Image img = Toolkit.getDefaultToolkit().getImage(EditorIndexUI.class.getResource("/assets/bg_main.png"));  
                 g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);  
             }  
         };
+        painelConteudo = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -55,55 +57,51 @@ public class EditorIndexUI extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 0, 0));
 
-        jPanel1.setForeground(new java.awt.Color(214, 207, 207));
-        jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel1MouseClicked(evt);
-            }
-        });
+        painelBackground.setLayout(new java.awt.BorderLayout());
+
+        painelConteudo.setOpaque(false);
+        painelConteudo.setLayout(new javax.swing.BoxLayout(painelConteudo, javax.swing.BoxLayout.LINE_AXIS));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 251, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 378, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout bgPanelLayout = new javax.swing.GroupLayout(bgPanel);
-        bgPanel.setLayout(bgPanelLayout);
-        bgPanelLayout.setHorizontalGroup(
-            bgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bgPanelLayout.createSequentialGroup()
-                .addGap(88, 88, 88)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(262, Short.MAX_VALUE))
+        painelConteudo.add(jPanel1);
+
+        jPanel2.setBackground(new java.awt.Color(51, 255, 0));
+        jPanel2.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 251, Short.MAX_VALUE)
         );
-        bgPanelLayout.setVerticalGroup(
-            bgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bgPanelLayout.createSequentialGroup()
-                .addGap(89, 89, 89)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(110, Short.MAX_VALUE))
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 378, Short.MAX_VALUE)
         );
 
-        getContentPane().add(bgPanel);
+        painelConteudo.add(jPanel2);
+
+        painelBackground.add(painelConteudo, java.awt.BorderLayout.CENTER);
+
+        getContentPane().add(painelBackground);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void formComponentResized(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentResized
-        bgPanel.setPreferredSize(new Dimension(this.getWidth(), this.getHeight()));
-        bgPanel.revalidate();
+        painelBackground.setPreferredSize(new Dimension(this.getWidth(), this.getHeight()));
+        painelBackground.revalidate();
     }//GEN-LAST:event_formComponentResized
-
-    private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
-        EditorLocalizacaoUI editorLocalizacaoUI = new EditorLocalizacaoUI();
-        editorLocalizacaoUI.setVisible(true);
-    }//GEN-LAST:event_jPanel1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -142,7 +140,9 @@ public class EditorIndexUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel bgPanel;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel painelBackground;
+    private javax.swing.JPanel painelConteudo;
     // End of variables declaration//GEN-END:variables
 }
