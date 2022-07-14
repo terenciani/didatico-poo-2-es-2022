@@ -5,12 +5,12 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.JPanel;
-import java.awt.Color;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-/*
+ /*
  * Conteúdo de ajuda:
  * Colocar uma imagem em um JPanel: https://tjisblogging.blogspot.com/2013/04/how-to-set-background-image-to-jframe.html
  */
@@ -38,6 +38,7 @@ public class EditorIndexUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         painelBackground =  new JPanel() {  
             public void paintComponent(Graphics g) {  
                 System.out.println(EditorIndexUI.class.getResource("/assets/bg_main.png")); 
@@ -46,8 +47,14 @@ public class EditorIndexUI extends javax.swing.JFrame {
             }  
         };
         painelConteudo = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        painelEsquerdo = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        painelDireito = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/estudantes.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -60,36 +67,47 @@ public class EditorIndexUI extends javax.swing.JFrame {
         painelBackground.setLayout(new java.awt.BorderLayout());
 
         painelConteudo.setOpaque(false);
+        painelConteudo.setPreferredSize(new java.awt.Dimension(500, 378));
         painelConteudo.setLayout(new javax.swing.BoxLayout(painelConteudo, javax.swing.BoxLayout.LINE_AXIS));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 251, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 378, Short.MAX_VALUE)
-        );
+        painelEsquerdo.setBackground(new java.awt.Color(220, 220, 220, 150));
+        painelEsquerdo.setPreferredSize(new java.awt.Dimension(250, 378));
+        painelEsquerdo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                painelEsquerdoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                painelEsquerdoMouseExited(evt);
+            }
+        });
+        painelEsquerdo.setLayout(new java.awt.GridLayout(1, 2));
 
-        painelConteudo.add(jPanel1);
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Acesso para Empréstimos");
+        painelEsquerdo.add(jLabel1);
 
-        jPanel2.setBackground(new java.awt.Color(51, 255, 0));
-        jPanel2.setOpaque(false);
+        painelConteudo.add(painelEsquerdo);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 251, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 378, Short.MAX_VALUE)
-        );
+        painelDireito.setBackground(new java.awt.Color(220, 220, 220, 150));
+        painelDireito.setPreferredSize(new java.awt.Dimension(250, 378));
+        painelDireito.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                painelDireitoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                painelDireitoMouseExited(evt);
+            }
+        });
+        painelDireito.setLayout(new java.awt.GridLayout());
 
-        painelConteudo.add(jPanel2);
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Acesso para Administrar");
+        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        painelDireito.add(jLabel3);
+
+        painelConteudo.add(painelDireito);
 
         painelBackground.add(painelConteudo, java.awt.BorderLayout.CENTER);
 
@@ -102,6 +120,30 @@ public class EditorIndexUI extends javax.swing.JFrame {
         painelBackground.setPreferredSize(new Dimension(this.getWidth(), this.getHeight()));
         painelBackground.revalidate();
     }//GEN-LAST:event_formComponentResized
+
+    private void painelEsquerdoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_painelEsquerdoMouseEntered
+        painelEsquerdo.setBackground(new java.awt.Color(220, 220, 220, 200));
+        this.validate();
+        this.repaint();
+    }//GEN-LAST:event_painelEsquerdoMouseEntered
+
+    private void painelEsquerdoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_painelEsquerdoMouseExited
+        painelEsquerdo.setBackground(new java.awt.Color(220, 220, 220, 150));
+        this.validate();
+        this.repaint();
+    }//GEN-LAST:event_painelEsquerdoMouseExited
+
+    private void painelDireitoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_painelDireitoMouseEntered
+        painelDireito.setBackground(new java.awt.Color(220, 220, 220, 200));
+        this.validate();
+        this.repaint();
+    }//GEN-LAST:event_painelDireitoMouseEntered
+
+    private void painelDireitoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_painelDireitoMouseExited
+        painelDireito.setBackground(new java.awt.Color(220, 220, 220, 150));
+        this.validate();
+        this.repaint();
+    }//GEN-LAST:event_painelDireitoMouseExited
 
     /**
      * @param args the command line arguments
@@ -132,7 +174,7 @@ public class EditorIndexUI extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() { 
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new EditorIndexUI().setVisible(true);
             }
@@ -140,9 +182,12 @@ public class EditorIndexUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel painelBackground;
     private javax.swing.JPanel painelConteudo;
+    private javax.swing.JPanel painelDireito;
+    private javax.swing.JPanel painelEsquerdo;
     // End of variables declaration//GEN-END:variables
 }
