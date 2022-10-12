@@ -1,4 +1,4 @@
-package br.edu.ifpr.paranavai.heranca;
+package br.edu.ifpr.paranavai.didatico.heranca;
 
 public class VeiculoTerrestre extends Veiculo {
 	private String placa;

@@ -1,4 +1,4 @@
-package br.edu.ifpr.paranavai.heranca;
+package br.edu.ifpr.paranavai.didatico.heranca;
 
 import javax.swing.JFrame;
 

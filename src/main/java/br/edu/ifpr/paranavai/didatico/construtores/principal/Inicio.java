@@ -1,9 +1,7 @@
-package br.edu.ifpr.paranavai.construtores.principal;
+package br.edu.ifpr.paranavai.didatico.construtores.principal;
 
-import java.util.Scanner;
-
-import br.edu.ifpr.paranavai.construtores.diagrama.Curso;
-import br.edu.ifpr.paranavai.construtores.diagrama.Estudante;
+import br.edu.ifpr.paranavai.didatico.construtores.diagrama.Curso;
+import br.edu.ifpr.paranavai.didatico.construtores.diagrama.Estudante;
 
 public class Inicio {
 

@@ -1,4 +1,4 @@
-package br.edu.ifpr.paranavai.construtores.diagrama;
+package br.edu.ifpr.paranavai.didatico.construtores.diagrama;
 
 
 public class Professor {
